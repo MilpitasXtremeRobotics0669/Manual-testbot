@@ -130,61 +130,36 @@ while (1==1) //Loop Forever
         //Driving Control
         if(abs(joystick.joy1_y1) > threshold)     // If the right analog stick's Y-axis readings are either above or below the threshold...
         {
-            motor[frontLeft_D1] = joystick.joy1_y1;             // ...move the right side of the robot.
+            motor[frontLeft] = joystick.joy1_y1;             // ...move the right side of the robot.
         }
         else                                      // Else the readings are within the threshold, so...
         {
-            motor[frontLeft_D1] = 0;                                            // ...stop the right side of the robot.
+            motor[frontLeft] = 0;                                            // ...stop the right side of the robot.
         }
         if(abs(joystick.joy1_y2) > threshold)     // If the left analog stick's Y-axis readings are either above or below the threshold...
         {
-            motor[frontRight_D1] = joystick.joy1_y2;                // ...move the left side of the robot.
+            motor[frontRight] = joystick.joy1_y2;                // ...move the left side of the robot.
         }
         else                                      // Else the readings are within the threshold, so...
         {
-            motor[frontRight_D1] = 0;                                           // ...stop the left side of the robot.
+            motor[frontRight] = 0;                                           // ...stop the left side of the robot.
         }
         if(abs(joystick.joy1_y1) > threshold)
         {
-            motor[backLeft_D1] = joystick.joy1_y1;
+            motor[backLeft] = joystick.joy1_y1;
         }
         else
         {
-            motor[backLeft_D1] = 0;
+            motor[backLeft] = 0;
         }
         if(abs(joystick.joy1_y2) > threshold)
         {
-            motor[backRight_D1] = joystick.joy1_y2;
+            motor[backRight] = joystick.joy1_y2;
         }
         else
         {
-            motor[backRight_D1] = 0;
+            motor[backRight] = 0;
         }
-        if(abs(joystick.joy2_y2) > threshold)     // If the right analog stick's Y-axis readings are either above or below the threshold...
-        {
-            motor[rightSholder_D2] = joystick.joy2_y1;              // ...move the right side of the robot.
-        }
-        else                                      // Else the readings are within the threshold, so...
-        {
-            motor[rightSholder_D2] = 0;                                         // ...stop the right side of the robot.
-        }
-        if(abs(joystick.joy2_y1) > threshold)     // If the left analog stick's Y-axis readings are either above or below the threshold...
-        {
-            motor[leftSholder_D2] = joystick.joy2_y1;               // ...move the left side of the robot.
-        }
-        else                                      // Else the readings are within the threshold, so...
-        {
-            motor[leftSholder_D2] = 0;                                          // ...stop the left side of the robot.
-        }
-        if(abs(joystick.joy2_x2) > threshold)
-        {
-            motor[Elbow_D2] = joystick.joy2_x2;
-        }
-        else
-        {
-            motor[Elbow_D2] = 0;
-        }
-    }
+       }
     }
 }
-
